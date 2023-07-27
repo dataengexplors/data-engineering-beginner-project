@@ -1,0 +1,5 @@
+notebook==7.0.0
+pandas==2.0.3
+awswrangler==3.2.1
+boto3==1.28.10
+dotenv==0.0.5

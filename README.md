@@ -1,35 +1,34 @@
-# create code in jupyter (create environment and install dependencies)
+# Data Engineering Beginner Project
 
-# create bucket in s3
+This project, created by Data Engineering Explorers, aims to create infrastrucutre and pipeline for the following design.
 
-## create access key
+![Pipeline Design](drawing-of-pipeline.png).
 
-access key: https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html
+## Steps
 
-## give access to user to write in bucket
+To create this project, a video in our [channel](https://www.youtube.com/@DataEngineeringExplorers) was released.
 
-https://stackoverflow.com/questions/36272286/getting-access-denied-when-calling-the-putobject-operation-with-bucket-level-per
+It follows the following steps:
 
-# setup env for airflow
+- create bucket in s3
 
-## install docker desktop / docker
+  - [create access key](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html)
+  - give access to user to write in bucket
 
-## deploy application locally in containers
+- setup env for airflow
 
-https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html
+  - [install docker desktop / docker](https://docs.docker.com/engine/install/)
+  - [deploy application locally in containers](ttps://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html)
 
-# create dag
+- create code in jupyter (create environment and install dependencies)
 
-https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/tasks.html
+- create dag using [tasks](https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/tasks.html)
 
-## change dockerfile to encompass dependency to write in s3
+  - change [dockerfile](https://docs.docker.com/engine/reference/commandline/build/) to encompass dependency to write in s3
+  - re-deploy application locally in containers - ok
 
-## re-deploy application locally in containers
+- test dag
 
-- create dockerfile https://docs.docker.com/engine/reference/commandline/build/
-- create again with steps and dockerfile
-  https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html
+- connect s3 data to [snowflake](https://docs.snowflake.com/en/user-guide/data-load-s3-compatible-storage)
 
-## test dag
-
-## connect to
+Reminder: don't forget to insert your AWS credentials in **aiflow/dags/.env** for the code to work.
